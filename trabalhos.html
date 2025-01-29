@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Guilherme Oliveira - Trabalhos</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Guilherme <span>Oliveira</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="index.html">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="skills.html">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="trabalhos.html">Trabalhos</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="contactos.html">Contactos</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+    </nav>
+
+    <section id="trabalhos">
+        <div class="trabalhos-container">
+            <h2>Trabalhos Realizados</h2>
+            <div class="trabalhos-list">
+                <!-- Trabalho 1 -->
+                <div class="trabalho-card">
+                    <h3>SportSpot</h3>
+                    <p>Descrição breve do trabalho realizado. Aqui você pode adicionar informações sobre o projeto, objetivos, tecnologias utilizadas, etc.</p>
+                    <a href="files/projeto1.pdf" download>
+                        <button>Baixar Projeto</button>
+                    </a>
+                </div>
+                
+                <!-- Trabalho 2 -->
+                <div class="trabalho-card">
+                    <h3>Ucha</h3>
+                    <p>Descrição breve do trabalho realizado. Aqui você pode adicionar informações sobre o projeto, objetivos, tecnologias utilizadas, etc.</p>
+                    <a href="files/projeto2.pdf" download>
+                        <button>Baixar Projeto</button>
+                    </a>
+                </div>
+                
+                <!-- Trabalho 3 -->
+                <div class="trabalho-card">
+                    <h3>CityExplorer</h3>
+                    <p>Descrição breve do trabalho realizado. Aqui você pode adicionar informações sobre o projeto, objetivos, tecnologias utilizadas, etc.</p>
+                    <a href="files/projeto3.pdf" download>
+                        <button>Baixar Projeto</button>
+                    </a>
+                </div>
+
+                <!-- Adicione mais projetos conforme necessário -->
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+       AOS.init({offset:0});
+    </script>
+</body>
+</html>

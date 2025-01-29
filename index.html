@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>Guilherme Oliveira</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Guilherme <span>Oliveira</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="index.html">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="skills.html">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="trabalhos.html">Trabalhos</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="contactos.html">Contactos</a></div>
+        </div>
+        <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">About</a>
+                <a href="Skills.html">Skills</a>
+                <a href="trabalhos.html">Trabalhos</a>
+                <a href="Contactos.html">Contactos</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="main-container">
+            <div class="image" data-aos="zoom-out" data-aos-duration="3000">
+                <img src="perfil.jpg" alt="">
+            </div>
+            <div class="content">
+                <h1 data-aos="fade-left" data-aos-duration="1500" data-aos-delay="700">Olá sou o <span>Guilherme Oliveira</span></h1>
+                <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm a <span class="typewriter-text"></span><label for="">|</label></div>
+                <p data-aos="flip-down" data-aos-duration="1500" data-aos-delay="1100">Olá, sou Guilherme Oliveira, tenho 20 anos e sou apaixonado por programação e futebol.
+                    Atualmente, estou relacionado com o Sporting Clube da Ucha, onde desenvolvo o meu gosto pelo Desporto. 
+                   Além disso, faço parte do movimento escutista há 9 anos, uma experiência que tem sido fundamental para meu crescimento pessoal e trabalho em equipa.</p>
+                <div class="social-links">
+                    <a href="https://github.com/guilherme12334" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1300"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/guilherme_cortez_oliveira/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1400"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/guilherme-oliveira-08a9b32ba/" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="1500"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="academico">
+        <div class="academico-container">
+            <h2 data-aos="fade-up" data-aos-duration="1500">Percurso Acadêmico</h2>
+            <div class="timeline">
+                <!-- Primeiro item -->
+                <div class="timeline-item left">
+                    <div class="timeline-content left">
+                    <h3>Ensino Primário</h3>
+                    <p>Introdução à aprendizagem e desenvolvimento</p> 
+                       <p>de habilidades básicas.</p>
+                    <p><strong>Escola Gonçalo Pereira</strong></p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-child"></i>
+                    </div>
+                </div>
+    
+                <!-- Segundo item -->
+                <div class="timeline-item right">
+                    <div class="timeline-content right">
+                        <h3>Ensino Regular</h3>
+                        <p>Fundação acadêmica em diversas disciplinas fundamentais.</p>
+                        <p><strong>Conservatorio De Música de Barcelos</strong></p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+                </div>
+    
+                <!-- Terceiro item -->
+                <div class="timeline-item left">
+                    <div class="timeline-content left">
+                        <h3>Ensino Secundário</h3>
+                        <p>Gestão de Equipamentos Informaticos</p>
+                        <p><strong>Escola Secundária de Barcelos</strong></p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-school"></i>
+                    </div>
+                </div>
+
+                 <!-- Quarto item -->
+                 <div class="timeline-item right">
+                    <div class="timeline-content right">
+                    <h3>Ensino Superior</h3>
+                    <p>CTESP Desenvolvimento Web e Multimédia</p>
+                    <p><strong>IPCA</strong> </p>
+                    </div>
+                    <div class="timeline-icon">
+                        <i class="fa-solid fa-university"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({offset:0});
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

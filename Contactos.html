@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Guilherme Oliveira - Contactos</title>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="logo" data-aos="zoom-in" data-aos-duration="1500">
+                Guilherme <span>Oliveira</span>
+            </div>
+            <div class="links">
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><a href="index.html">About</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="300"><a href="skills.html">Skills</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><a href="trabalhos.html">Trabalhos</a></div>
+                <div class="link" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500"><a href="contactos.html">Contactos</a></div>
+            </div>
+            <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+        </div>
+        <div class="dropdown">
+            <div class="links">
+                <a href="index.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="trabalhos.html">Trabalhos</a>
+                <a href="contactos.html">Contactos</a>
+                <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+            </div>
+        </div>
+    </nav>
+
+    <section id="contact">
+        <div class="contact-container">
+            <h2>Contacta-me</h2>
+            <div class="contact-details">
+                <div class="contact-info">
+                    <h3>Informações de Contato</h3>
+                    <ul>
+                        <li><i class="fa-solid fa-envelope"></i> <a href="mailto:seuemail@exemplo.com">Guilhermecortez915@gmail.com</a></li>
+                        <li><i class="fa-solid fa-phone"></i> <a href="tel:+351123456789">+351 924 398 248</a></li>
+                        <li><i class="fa-solid fa-map-marker-alt"></i> Braga, Portugal</li>
+                        <li><i class="fa-brands fa-github"></i> <a href="https://github.com/guilherme12334" target="_blank">GitHub</a></li>
+                        <li><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/guilherme-oliveira-08a9b32ba/" target="_blank">LinkedIn</a></li>
+                    </ul>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Envie-me uma Mensagem</h3>
+                    <form id="contact-form" action="javascript:void(0)" method="POST">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Seu Email" required>
+
+                        <label for="message">Mensagem:</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Sua Mensagem" required></textarea>
+
+                        <button type="submit" id="send-message">Enviar Mensagem</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        // Inicializa o EmailJS com seu User ID
+(function() {
+    emailjs.init("V-ZZxB7pwXwDhBef8"); // Substitua 'your_user_id' pelo seu ID de usuário do EmailJS
+})();
+
+// Enviar a mensagem quando o formulário for enviado
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Previne o envio padrão do formulário
+
+    const form = event.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const message = form.message.value;
+
+    // Parâmetros que serão enviados no template do EmailJS
+    const templateParams = {
+        from_name: name,
+        from_email: email,
+        message: message
+    };
+
+    // Envio da mensagem usando o serviço EmailJS
+    emailjs.send('service_vouun4n', 'template_2004', templateParams)  // Substitua 'your_service_id' e 'your_template_id' pelos valores corretos
+        .then(function(response) {
+            alert("Mensagem enviada com sucesso!");
+            form.reset(); // Limpar o formulário após envio
+        }, function(error) {
+            alert("Erro ao enviar mensagem. Tente novamente.");
+            console.error('Erro ao enviar a mensagem: ', error);
+        });
+});
+    </script>
+</body>
+</html>
