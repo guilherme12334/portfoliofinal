@@ -222,58 +222,6 @@ section{
     font-weight: 700;
     box-shadow: 0 0 40px #077b32;
 }
-#education {
-    width: 100%;
-    height: auto;
-    padding: 50px 0;
-    background-color: black;
-    color: white;
-    text-align: center;
-}
-
-.education-container h2 {
-    font-size: 2rem;
-    color: #077b32;
-    text-shadow: 0 0 10px #077b32;
-    margin-bottom: 30px;
-}
-
-.education-timeline {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-}
-
-.edu-card {
-    width: 60%;
-    background: rgba(255, 255, 255, 0.1);
-    border-left: 5px solid #077b32;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: left;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: 0.3s;
-}
-
-.edu-card:hover {
-    transform: scale(1.05);
-}
-
-.edu-card h3 {
-    color: #077b32;
-    font-size: 1.5rem;
-}
-
-.edu-card p {
-    font-size: 1rem;
-    font-weight: bold;
-}
-
-.edu-card span {
-    font-size: 0.9rem;
-    opacity: 0.8;
-}
 
 .skill-card img {
     width: 50px;  /* Ajuste conforme necessário */
@@ -374,7 +322,7 @@ html {
 .contact-info,
 .contact-form {
     width: 45%;
-    background-color: #fff;
+    background-color: #1a1a1a;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
@@ -396,6 +344,7 @@ html {
     margin: 10px 0;
     display: flex;
     align-items: center;
+    color: white; /* Deixa a localização em branco */
 }
 
 .contact-info ul li i {
@@ -405,7 +354,7 @@ html {
 }
 
 .contact-info a {
-    color: black;
+    color: white;
     text-decoration: none;
 }
 
@@ -413,14 +362,23 @@ html {
     text-decoration: underline;
 }
 
+/* Estiliza os campos do formulário */
 .contact-form input,
 .contact-form textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #ddd;
+    border: 1px solid white; /* Borda branca para melhor visibilidade */
     border-radius: 5px;
     font-size: 1rem;
+    background-color: transparent;
+    color: white; /* Cor do texto branca */
+}
+
+/* Estiliza o placeholder para ficar mais visível */
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: rgba(255, 255, 255, 0.7); /* Cor branca com transparência */
 }
 
 .contact-form button {
@@ -436,6 +394,7 @@ html {
 .contact-form button:hover {
     background-color: #065c2f;
 }
+
 
 /* Trabalhos Section */
 #trabalhos {
@@ -461,7 +420,7 @@ html {
 }
 
 .trabalho-card {
-    background-color: #fff;
+    background-color: #1a1a1a;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -476,12 +435,12 @@ html {
 .trabalho-card h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #333;
+    color: #077b32;
 }
 
 .trabalho-card p {
     font-size: 1rem;
-    color: #777;
+    color: white;
     margin-bottom: 15px;
 }
 
@@ -500,111 +459,166 @@ html {
     background-color: #065f26;
 }
 
-#academico {
+.academico {
+    text-align: center;
     padding: 50px 20px;
-    background-color: black;
-    color: #fff;
+    color: white;
+}
+
+.academico h1 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #077b32;
 }
 
 .academico-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-}
-
-.timeline {
-    position: relative;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.timeline::before {
-    content: '';
-    position: absolute;
-    width: 6px;
-    background-color: #077b32;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.timeline-item {
     display: flex;
-    justify-content: flex-start;
-    margin: 20px 0;
-    position: relative;
-    flex-direction: row;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
-.timeline-item.left .timeline-content {
-    margin-left: 60px;
-    margin-right: auto;
+.academico-box {
+    background-color: #1a1a1a;
+    border: 2px solid #077b32;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: #077b32;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.academico-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px #077b32;
+}
+
+.academico-box img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.academico-box .text {
+    flex: 1;
     text-align: left;
 }
 
-.timeline-item.right .timeline-content {
-    margin-left: auto;
-    margin-right: 60px;
-    text-align: right;
+.academico-box h2 {
+    font-size: 1.3rem;
+    margin: 0;
+    color: #077b32;
 }
 
-.timeline-item .timeline-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #077b32;
-    color: #fff;
-    padding: 10px;
-    border-radius: 50%;
-    font-size: 24px;
+.academico-box p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #ccc;
 }
 
-.timeline-item .timeline-content {
-    width: 45%;
-    padding: 20px;
-    background-color: #222;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
+.academico-box .tag {
+    display: inline-block;
+    background: #077b32;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
 }
 
-.timeline-item .timeline-content h3 {
-    margin-bottom: 10px;
-}
+/* Responsividade para telas menores */
 
-.timeline-item .timeline-content p {
-    font-size: 1rem;
-    color: #bbb;
-}
-
-.timeline-item:hover .timeline-content {
-    transform: translateY(-10px);
-}
-
+/* Responsividade: para telas menores que 768px */
 @media (max-width: 768px) {
-    .timeline-item {
+    .main-container {
         flex-direction: column;
+        align-items: center;
     }
 
-    .timeline-item .timeline-content {
-        width: 80%;
-        margin: 10px auto;
+    .image {
+        margin-bottom: 20px;
+        flex: 1 1 100%;
     }
 
-    .timeline::before {
-        left: 30px;
+    .content {
+        flex: 1 1 100%;
+    }
+
+    .content h1 {
+        font-size: 2rem;
+    }
+
+    .content p {
+        font-size: 1rem;
+    }
+
+    .social-links a {
+        font-size: 1.8rem;
     }
 }
 
+/* Responsividade: para telas muito pequenas (como smartphones) */
+@media (max-width: 480px) {
+    .content h1 {
+        font-size: 1.8rem;
+    }
+
+    .typewriter {
+        font-size: 1.2rem;
+    }
+
+    .social-links a {
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 768px) {
+    .academico-box {
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+        gap: 10px;
+    }
+
+    .academico-box img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .academico-box .tag {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .academico-box {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .academico-box img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .academico-box h2 {
+        font-size: 16px;
+    }
+
+    .academico-box p {
+        font-size: 14px;
+    }
+
+    .academico-box .tag {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
+}
 
 
 @media (max-width: 768px) {
