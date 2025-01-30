@@ -46,53 +46,52 @@
                         <li><i class="fa-brands fa-linkedin"></i> <a href="https://www.linkedin.com/in/guilherme-oliveira-08a9b32ba/" target="_blank">LinkedIn</a></li>
                     </ul>
                 </div>
-
+    
                 <div class="contact-form">
                     <h3>Envie-me uma Mensagem</h3>
-                    <form id="contact-form" action="javascript:void(0)" method="POST">
+                    <form id="contact-form">
                         <label for="name"></label>
                         <input type="text" id="name" name="name" placeholder="Seu Nome" required>
-
+    
                         <label for="email"></label>
                         <input type="email" id="email" name="email" placeholder="Seu Email" required>
-
+    
                         <label for="message"></label>
                         <textarea id="message" name="message" rows="5" placeholder="Sua Mensagem" required></textarea>
-
+    
                         <button type="submit" id="send-message">Enviar Mensagem</button>
                     </form>
+                    <p id="form-feedback"></p> <!-- Elemento adicionado para feedback -->
                 </div>
             </div>
         </div>
     </section>
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
         // Inicializar EmailJS
         (function () {
-            emailjs.init("V-ZZxB7pwXwDhBef8"); // Substitua com sua public key do EmailJS
+            emailjs.init("V-ZZxB7pwXwDhBef8"); // Substitua com sua PUBLIC KEY correta
         })();
-
+    
         // Enviar o formulário
         document.getElementById("contact-form").addEventListener("submit", function (e) {
             e.preventDefault();
             const feedback = document.getElementById("form-feedback");
-
-            emailjs
-                .sendForm("ervice_vouun4n", "template_2004", this)
-                .then(
-                    () => {
-                        feedback.textContent = "Mensagem enviada com sucesso!";
-                        feedback.className = "success";
-                        this.reset();
-                    },
-                    (error) => {
-                        feedback.textContent = "Ocorreu um erro. Tente novamente.";
-                        feedback.className = "error";
-                        console.error("Erro:", error);
-                    }
-                );
+    
+            emailjs.sendForm("service_vouun4n", "template_2004", this)
+                .then(() => {
+                    feedback.textContent = "Mensagem enviada com sucesso!";
+                    feedback.className = "success";
+                    this.reset();
+                })
+                .catch((error) => {
+                    feedback.textContent = "Ocorreu um erro. Tente novamente.";
+                    feedback.className = "error";
+                    console.error("Erro:", error);
+                });
         });
     </script>
-     <script src="script.js"></script>
+    
 </body>
 </html>
