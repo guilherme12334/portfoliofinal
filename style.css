@@ -316,11 +316,12 @@ section {
 
 /* RESPONSIVIDADE */
 
-/* Tablets e smartphones médios */
 @media (max-width: 768px) {
     .main-container {
         flex-direction: column;
+        align-items: center;
         text-align: center;
+        flex-wrap: wrap; /* Permite que os elementos quebrem linha */
         gap: 20px;
     }
 
@@ -341,6 +342,14 @@ section {
         font-size: 1rem;
     }
 
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap; /* Impede sobreposição */
+        margin-top: 20px;
+    }
+
     .social-links i {
         font-size: 1.8rem;
         width: 2.5rem;
@@ -350,6 +359,12 @@ section {
     .content button {
         width: 80%;
         font-size: 1rem;
+    }
+
+    /* Ajuste para evitar sobreposição */
+    .academico {
+        margin-top: 50px; /* Garante espaço entre as seções */
+        width: 100%;
     }
 
     .academico-box {
@@ -365,7 +380,6 @@ section {
     }
 }
 
-/* Smartphones pequenos */
 @media (max-width: 480px) {
     .main-container .image {
         width: 250px;
@@ -380,6 +394,10 @@ section {
         font-size: 1.2rem;
     }
 
+    .social-links {
+        margin-top: 20px;
+    }
+
     .social-links i {
         width: 2rem;
         height: 2rem;
@@ -389,6 +407,10 @@ section {
     .content button {
         width: 100%;
         font-size: 0.9rem;
+    }
+
+    .academico {
+        margin-top: 60px; /* Mais espaço em telas menores */
     }
 
     .academico-box {
@@ -414,6 +436,7 @@ section {
         padding: 6px 8px;
     }
 }
+
 
 
 .skill-card img {
