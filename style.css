@@ -23,6 +23,24 @@ nav{
     justify-content: space-around;
     align-items: center;
 }
+.navbar-logo {
+    height: 150px; /* Ajuste conforme necessário */
+    width: auto;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ff6600; /* Cor do texto ao lado do logo */
+}
+
 .logo{
     color: white;
     font-size: 2rem;
@@ -317,6 +335,13 @@ section {
 /* RESPONSIVIDADE */
 
 /* Tablets e smartphones médios */
+
+@media (max-width: 768px) {
+    .navbar-logo {
+        height: 30px;
+    }
+}
+
 @media (max-width: 768px) {
     .main-container {
         flex-direction: column;
