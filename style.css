@@ -683,7 +683,12 @@ html {
     background-color: #065f26;
 }
 
-
+@media (max-width: 600px) {
+    .email-container {
+        width: 90% !important;
+        padding: 10px !important;
+    }
+}
 
 @media (max-width: 768px) {
     .contact-details {
