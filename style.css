@@ -582,6 +582,8 @@ html {
     overflow-wrap: break-word; /* Garante que ele não ultrapassa os limites */
     display: inline-block; /* Mantém a formatação correta */
     max-width: 100%; /* Evita que ultrapasse o container */
+    color: white; /* Define a cor do texto como branco */
+    text-decoration: none; /* Remove o sublinhado */
 }
 
 .contact-info a:hover {
