@@ -578,8 +578,10 @@ html {
 }
 
 .contact-info a {
-    color: white;
-    text-decoration: none;
+    word-break: break-word; /* Permite que o email quebre em palavras */
+    overflow-wrap: break-word; /* Garante que ele não ultrapassa os limites */
+    display: inline-block; /* Mantém a formatação correta */
+    max-width: 100%; /* Evita que ultrapasse o container */
 }
 
 .contact-info a:hover {
