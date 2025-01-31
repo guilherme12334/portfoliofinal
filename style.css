@@ -698,8 +698,7 @@ html {
 
     .contact-info,
     .contact-form {
-        width: 100%;
-        margin-bottom: 20px;
+        width: 90%; /* Faz com que os elementos ocupem quase toda a largura */
     }
 }
 
